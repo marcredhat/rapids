@@ -15,6 +15,7 @@ $SPARK_HOME/bin/spark-submit \
      --deploy-mode cluster  \
      --name examplejob \
      --class org.apache.spark.examples.SparkPi \
+     --conf spark.dynamicAllocation.enabled=false \
      --conf spark.executor.instances=1 \
      --conf spark.executor.resource.gpu.amount=1 \
      --conf spark.executor.memory=4G \
