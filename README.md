@@ -59,6 +59,7 @@ $SPARK_HOME/bin/spark-shell \
      --master $K8SMASTER \
      --name mysparkshell \
      --deploy-mode client  \
+     --conf spark.dynamicAllocation.enabled=false \
      --conf spark.executor.instances=1 \
      --conf spark.executor.resource.gpu.amount=1 \
      --conf spark.executor.memory=4G \
