@@ -64,11 +64,12 @@ $SPARK_HOME/bin/spark-shell \
      --conf spark.executor.resource.gpu.amount=1 \
      --conf spark.executor.memory=4G \
      --conf spark.driver.cores=1 \
-     --conf spark.kubernetes.driver.limit.cores=1200m \
+     --conf spark.kubernetes.driver.limit.cores=500m \
      --conf spark.driver.memory=512m \
      --conf spark.executor.instances=2 \
      --conf spark.executor.cores=1 \
-     --conf spark.kubernetes.executor.limit.cores=1200m \
+     --conf spark.kubernetes.executor.limit.cores=500m \
+     --conf spark.kubernetes.executor.request.cores=500m\
      --conf spark.executor.memory=1024m \
      --conf spark.task.cpus=1 \
      --conf spark.executor.cores=1 \
