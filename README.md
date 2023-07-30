@@ -43,10 +43,10 @@ $SPARK_HOME/bin/spark-submit \
      --conf spark.driver.extraClassPath=/opt/spark/jars/rapids-4-spark_2.12-23.06.0.jar \
      --driver-memory 100M \
      local:///opt/spark/examples/jars/spark-examples_2.12-3.4.0.jar
-
+```
 
 Interactive shell:
-
+```
 export SPARK_HOME=/opt/spark
 export IMAGE_NAME=ip-10-10-85-187.us-west-2.compute.internal:9999/cdppvc2/rapids340
 export K8SMASTER=k8s://https://api.clev-ocp4-1dff9a7a.clevcdp.net:6443
@@ -88,13 +88,19 @@ $SPARK_HOME/bin/spark-shell \
      --driver-class-path=/opt/spark/jars/rapids-4-spark_2.12-23.06.0.jar \
      --driver-memory 1G
 
+```
 
 https://nvidia.github.io/spark-rapids/docs/get-started/getting-started-kubernetes.html
+
+```
 val df = spark.sparkContext.parallelize(Seq(1)).toDF()
 df.createOrReplaceTempView("df")
-spark.sql("SELECT value FROM df WHERE value <>1").show
 spark.sql("SELECT value FROM df WHERE value <>1").explain
+```
 
+```
+spark.sql("SELECT value FROM df WHERE value <>1").show
+```
 
 [root@rhel91 spark-rapids-ocp]# kubectl view-allocations -r gpu
  Resource                                          Requested       Limit  Allocatable  Free
