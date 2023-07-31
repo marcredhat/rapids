@@ -1,7 +1,23 @@
 
+
+```
+build/buildall --option='-Dcudf.version=cuda12' --profile=341 --option='-Drat.numUnapprovedLicenses=200'
+
+https://dlcdn.apache.org/spark/spark-3.4.1/spark-3.4.1-bin-hadoop3.tgz
+```
+
+http://erikerlandson.github.io/blog/2021/06/03/running-rapids-spark-on-ocp/
+
+
+```
+https://github.com/erikerlandson/spark-rapids-ocp/blob/blog-june-2021/Dockerfile
+
+kubectl patch serviceaccount spark  -p '{"imagePullSecrets": [{"name": "regcred"}]}'
+
 ```
 
 
+```
 export SPARK_HOME=/opt/spark
 export IMAGE_NAME=ip-10-10-85-187.us-west-2.compute.internal:9999/cdppvc2/rapids340
 export K8SMASTER=k8s://https://api.clev-ocp4-1dff9a7a.clevcdp.net:6443
