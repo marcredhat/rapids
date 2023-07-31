@@ -19,7 +19,7 @@ kubectl patch serviceaccount spark  -p '{"imagePullSecrets": [{"name": "regcred"
 
 ```
 export SPARK_HOME=/opt/spark
-export IMAGE_NAME=ip-10-10-85-187.us-west-2.compute.internal:9999/cdppvc2/rapids340
+export IMAGE_NAME=ip-10-10-85-187.us-west-2.compute.internal:9999/cdppvc2/rapids340marc
 export K8SMASTER=k8s://https://api.clev-ocp4-1dff9a7a.clevcdp.net:6443
 export SPARK_NAMESPACE=finetune
 export SPARK_DRIVER_NAME=sparkdriver
@@ -64,7 +64,7 @@ $SPARK_HOME/bin/spark-submit \
 Interactive shell:
 ```
 export SPARK_HOME=/opt/spark
-export IMAGE_NAME=ip-10-10-85-187.us-west-2.compute.internal:9999/cdppvc2/rapids340
+export IMAGE_NAME=ip-10-10-85-187.us-west-2.compute.internal:9999/cdppvc2/rapids340marc
 export K8SMASTER=k8s://https://api.clev-ocp4-1dff9a7a.clevcdp.net:6443
 export SPARK_NAMESPACE=finetune
 export SPARK_DRIVER_NAME=sparkdriver
